@@ -6,8 +6,8 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Events\Registered;
-use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use App\Http\Requests\Auth\RegisterRequest;
 
 class RegisterController extends Controller
 {
@@ -81,14 +81,8 @@ class RegisterController extends Controller
             ->with('success', 'Your e-mail is verified. You can now login.');
     }
 
-    public function register(Request $request)
+    public function register(RegisterRequest $request)
     {
-        $this->validate($request, [
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
-        ]);
-
         $user = User::create([
             'name' => $request['name'],
             'email' => $request['email'],
