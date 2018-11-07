@@ -4,9 +4,7 @@ namespace App\UseCases\Auth;
 
 use App\Entity\User;
 use App\Http\Requests\Auth\RegisterRequest;
-use App\Mail\Auth\VerifyMail;
 use Illuminate\Auth\Events\Registered;
-use Illuminate\Support\Facades\Mail;
 
 class RegisterService
 {
@@ -17,8 +15,6 @@ class RegisterService
             $request['email'],
             $request['password']
         );
-
-        Mail::to($user->email)->send(new VerifyMail($user));
 
         event(new Registered($user));
     }
