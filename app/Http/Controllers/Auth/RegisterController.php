@@ -5,20 +5,16 @@ namespace App\Http\Controllers\Auth;
 use App\Entity\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Auth\Events\Registered;
 use App\Http\Requests\Auth\RegisterRequest;
 
 class RegisterController extends Controller
 {
+    private $service;
 
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    public function __construct(RegisterService $service)
     {
         $this->middleware('guest');
+        $this->service = $service;
     }
 
     /**
@@ -68,7 +64,7 @@ class RegisterController extends Controller
         }
 
         try {
-            $user->verify();
+            $this->service->verify($user->id);
             return redirect()->route('login')->with('success', 'Your e-mail is verified. You can now login.');
         } catch (\DomainException $e) {
             return redirect()->route('login')->with('error', $e->getMessage());
@@ -77,13 +73,7 @@ class RegisterController extends Controller
 
     public function register(RegisterRequest $request)
     {
-        $user = User::register(
-            $request['name'],
-            $request['email'],
-            $request['password']
-        );
-
-        event(new Registered($user));
+        $this->service->register($request);
 
         return redirect()->route('login')
             ->with('success', 'Check your email and click on the link to verify.');
