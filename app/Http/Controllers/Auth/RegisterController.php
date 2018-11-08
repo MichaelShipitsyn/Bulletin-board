@@ -6,6 +6,7 @@ use App\Entity\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\Auth\RegisterRequest;
+use App\UseCases\Auth\RegisterService;
 
 class RegisterController extends Controller
 {
