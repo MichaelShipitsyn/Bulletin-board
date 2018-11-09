@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    <p><a href="{{ route('cabinet.adverts.create') }}" class="btn btn-success">Add Advert</a></p>
     @if ($regions)
         <div class="card card-default mb-3">
             <div class="card-header">

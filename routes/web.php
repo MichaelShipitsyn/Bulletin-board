@@ -41,9 +41,9 @@ Route::group(
         ], function () {
             Route::get('/', 'AdvertController@index')->name('index');
             Route::get('/create', 'CreateController@category')->name('create');
-            Route::get('/create/region/{category}/{region?}', 'CreateController@region')->name('create.region');
-            Route::get('/create/advert/{category}/{region?}', 'CreateController@advert')->name('create.advert');
-            Route::post('/create/advert/{category}/{region?}', 'CreateController@store')->name('create.advert.store');
+            Route::get('/create/region/{region?}', 'CreateController@region')->name('create.region');
+            Route::get('/create/advert/{region?}', 'CreateController@advert')->name('create.advert');
+            Route::post('/create/advert/{region?}', 'CreateController@store')->name('create.advert.store');
             Route::get('/{advert}/edit', 'ManageController@editForm')->name('edit');
             Route::put('/{advert}/edit', 'ManageController@edit');
             Route::get('/{advert}/photos', 'ManageController@photosForm')->name('photos');

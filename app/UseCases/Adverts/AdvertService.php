@@ -22,7 +22,7 @@ class AdvertService
         /** @var Region $region */
         $region = $regionId ? Region::findOrFail($regionId) : null;
 
-        return DB::transaction(function () use ($request, $user, $category, $region) {
+        return DB::transaction(function () use ($request, $user, $region) {
 
             /** @var Advert $advert */
             $advert = Advert::make([
