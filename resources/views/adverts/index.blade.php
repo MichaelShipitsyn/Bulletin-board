@@ -16,7 +16,7 @@
                         <div class="col-md-3">
                             <ul class="list-unstyled">
                                 @foreach ($chunk as $current)
-                                    <li><a href="{{ route('adverts.index', [$current]) }}">{{ $current->name }}</a></li>
+                                    <li><a href="{{ route('adverts.index', array_merge([$current], request()->all())) }}">{{ $current->name }}</a></li>
                                 @endforeach
                             </ul>
                         </div>

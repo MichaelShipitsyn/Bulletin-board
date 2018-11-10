@@ -8,22 +8,27 @@ use App\Http\Controllers\Controller;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
+use App\Http\Requests\Adverts\SearchRequest;
+use App\ReadModel\AdvertReadRepository;
+use App\UseCases\Adverts\SearchService;
+use Illuminate\Http\Request;
 
 class AdvertController extends Controller
 {
-    public function index(Region $region = null)
+    private $search;
+
+    public function __construct(SearchService $search)
     {
-        $query = Advert::active()->with(['region'])->orderByDesc('published_at');
+        $this->search = $search;
+    }
 
-        if ($region) {
-            $query->forRegion($region);
-        }
-
+    public function index(SearchRequest $request, Region $region = null)
+    {
         $regions = $region
             ? $region->children()->orderBy('name')->getModels()
             : Region::roots()->orderBy('name')->getModels();
 
-        $adverts = $query->paginate(20);
+        $adverts = $this->search->search($region, $request, 20, $request->get('page', 1));
 
         return view('adverts.index', compact('region', 'regions', 'adverts'));
     }
