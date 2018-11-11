@@ -30,7 +30,7 @@ class SearchService
             return !empty($value['equals']) || !empty($value['from']) || !empty($value['to']);
         });
 
-        $response = $this->client->search(dd([
+        $response = $this->client->search([
             'index' => 'app',
             'type' => 'advert',
             'body' => [
@@ -74,7 +74,7 @@ class SearchService
                     ],
                 ],
             ],
-        ]));
+        ]);
 
 
 
