@@ -8,6 +8,7 @@ use App\Entity\User;
 use App\Entity\Adverts\Advert\Advert;
 use App\Entity\Banner\Banner;
 use App\Entity\Ticket\Ticket;
+use Laravel\Passport\Passport;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -27,12 +28,14 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        $this->registerPolicies();
         $this->registerPermissions();
+
+        Passport::routes();
     }
 
     private function registerPermissions(): void
     {
-        $this->registerPolicies();
 
         Gate::define('admin-panel', function (User $user) {
             return $user->isAdmin() || $user->isModerator();

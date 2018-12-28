@@ -5,13 +5,14 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2018-11-09 15:00:02.
+    * Generated on 2018-12-28 16:11:40.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
     */
     override(new \Illuminate\Contracts\Container\Container, map([
         '' => '@',
+        'App\Services\Banner\CostCalculator' => \App\Services\Banner\CostCalculator::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsManager' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsManager::class,
@@ -34,6 +35,8 @@ namespace PHPSTORM_META {
         'Illuminate\Session\Middleware\StartSession' => \Illuminate\Session\Middleware\StartSession::class,
         'NunoMaduro\Collision\Contracts\Adapters\Phpunit\Listener' => \NunoMaduro\Collision\Adapters\Phpunit\Listener::class,
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
+        'Psr\Http\Message\ResponseInterface' => \Zend\Diactoros\Response::class,
+        'Psr\Http\Message\ServerRequestInterface' => \Zend\Diactoros\ServerRequest::class,
         'auth' => \Illuminate\Auth\AuthManager::class,
         'auth.driver' => \Illuminate\Auth\SessionGuard::class,
         'auth.password' => \Illuminate\Auth\Passwords\PasswordBrokerManager::class,
@@ -154,6 +157,7 @@ namespace PHPSTORM_META {
     ]));
     override(\Illuminate\Contracts\Container\Container::make(0), map([
         '' => '@',
+        'App\Services\Banner\CostCalculator' => \App\Services\Banner\CostCalculator::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsManager' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsManager::class,
@@ -176,6 +180,8 @@ namespace PHPSTORM_META {
         'Illuminate\Session\Middleware\StartSession' => \Illuminate\Session\Middleware\StartSession::class,
         'NunoMaduro\Collision\Contracts\Adapters\Phpunit\Listener' => \NunoMaduro\Collision\Adapters\Phpunit\Listener::class,
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
+        'Psr\Http\Message\ResponseInterface' => \Zend\Diactoros\Response::class,
+        'Psr\Http\Message\ServerRequestInterface' => \Zend\Diactoros\ServerRequest::class,
         'auth' => \Illuminate\Auth\AuthManager::class,
         'auth.driver' => \Illuminate\Auth\SessionGuard::class,
         'auth.password' => \Illuminate\Auth\Passwords\PasswordBrokerManager::class,
@@ -296,6 +302,7 @@ namespace PHPSTORM_META {
     ]));
     override(\Illuminate\Contracts\Container\Container::makeWith(0), map([
         '' => '@',
+        'App\Services\Banner\CostCalculator' => \App\Services\Banner\CostCalculator::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsManager' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsManager::class,
@@ -318,6 +325,8 @@ namespace PHPSTORM_META {
         'Illuminate\Session\Middleware\StartSession' => \Illuminate\Session\Middleware\StartSession::class,
         'NunoMaduro\Collision\Contracts\Adapters\Phpunit\Listener' => \NunoMaduro\Collision\Adapters\Phpunit\Listener::class,
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
+        'Psr\Http\Message\ResponseInterface' => \Zend\Diactoros\Response::class,
+        'Psr\Http\Message\ServerRequestInterface' => \Zend\Diactoros\ServerRequest::class,
         'auth' => \Illuminate\Auth\AuthManager::class,
         'auth.driver' => \Illuminate\Auth\SessionGuard::class,
         'auth.password' => \Illuminate\Auth\Passwords\PasswordBrokerManager::class,
@@ -438,6 +447,7 @@ namespace PHPSTORM_META {
     ]));
     override(\App::make(0), map([
         '' => '@',
+        'App\Services\Banner\CostCalculator' => \App\Services\Banner\CostCalculator::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsManager' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsManager::class,
@@ -460,6 +470,8 @@ namespace PHPSTORM_META {
         'Illuminate\Session\Middleware\StartSession' => \Illuminate\Session\Middleware\StartSession::class,
         'NunoMaduro\Collision\Contracts\Adapters\Phpunit\Listener' => \NunoMaduro\Collision\Adapters\Phpunit\Listener::class,
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
+        'Psr\Http\Message\ResponseInterface' => \Zend\Diactoros\Response::class,
+        'Psr\Http\Message\ServerRequestInterface' => \Zend\Diactoros\ServerRequest::class,
         'auth' => \Illuminate\Auth\AuthManager::class,
         'auth.driver' => \Illuminate\Auth\SessionGuard::class,
         'auth.password' => \Illuminate\Auth\Passwords\PasswordBrokerManager::class,
@@ -580,6 +592,7 @@ namespace PHPSTORM_META {
     ]));
     override(\App::makeWith(0), map([
         '' => '@',
+        'App\Services\Banner\CostCalculator' => \App\Services\Banner\CostCalculator::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsManager' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsManager::class,
@@ -602,6 +615,8 @@ namespace PHPSTORM_META {
         'Illuminate\Session\Middleware\StartSession' => \Illuminate\Session\Middleware\StartSession::class,
         'NunoMaduro\Collision\Contracts\Adapters\Phpunit\Listener' => \NunoMaduro\Collision\Adapters\Phpunit\Listener::class,
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
+        'Psr\Http\Message\ResponseInterface' => \Zend\Diactoros\Response::class,
+        'Psr\Http\Message\ServerRequestInterface' => \Zend\Diactoros\ServerRequest::class,
         'auth' => \Illuminate\Auth\AuthManager::class,
         'auth.driver' => \Illuminate\Auth\SessionGuard::class,
         'auth.password' => \Illuminate\Auth\Passwords\PasswordBrokerManager::class,
@@ -722,6 +737,7 @@ namespace PHPSTORM_META {
     ]));
     override(\app(0), map([
         '' => '@',
+        'App\Services\Banner\CostCalculator' => \App\Services\Banner\CostCalculator::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsManager' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsManager::class,
@@ -744,6 +760,8 @@ namespace PHPSTORM_META {
         'Illuminate\Session\Middleware\StartSession' => \Illuminate\Session\Middleware\StartSession::class,
         'NunoMaduro\Collision\Contracts\Adapters\Phpunit\Listener' => \NunoMaduro\Collision\Adapters\Phpunit\Listener::class,
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
+        'Psr\Http\Message\ResponseInterface' => \Zend\Diactoros\Response::class,
+        'Psr\Http\Message\ServerRequestInterface' => \Zend\Diactoros\ServerRequest::class,
         'auth' => \Illuminate\Auth\AuthManager::class,
         'auth.driver' => \Illuminate\Auth\SessionGuard::class,
         'auth.password' => \Illuminate\Auth\Passwords\PasswordBrokerManager::class,
@@ -864,6 +882,7 @@ namespace PHPSTORM_META {
     ]));
     override(\resolve(0), map([
         '' => '@',
+        'App\Services\Banner\CostCalculator' => \App\Services\Banner\CostCalculator::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsManager' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsManager::class,
@@ -886,6 +905,8 @@ namespace PHPSTORM_META {
         'Illuminate\Session\Middleware\StartSession' => \Illuminate\Session\Middleware\StartSession::class,
         'NunoMaduro\Collision\Contracts\Adapters\Phpunit\Listener' => \NunoMaduro\Collision\Adapters\Phpunit\Listener::class,
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
+        'Psr\Http\Message\ResponseInterface' => \Zend\Diactoros\Response::class,
+        'Psr\Http\Message\ServerRequestInterface' => \Zend\Diactoros\ServerRequest::class,
         'auth' => \Illuminate\Auth\AuthManager::class,
         'auth.driver' => \Illuminate\Auth\SessionGuard::class,
         'auth.password' => \Illuminate\Auth\Passwords\PasswordBrokerManager::class,
