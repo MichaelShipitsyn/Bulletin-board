@@ -43,7 +43,7 @@ Route::group(
             'middleware' => [App\Http\Middleware\FilledProfile::class],
         ], function () {
             Route::get('/', 'AdvertController@index')->name('index');
-            Route::get('/create', 'CreateController@category')->name('create');
+            Route::get('/create', 'CreateController@advert')->name('create');
             Route::get('/create/region/{region?}', 'CreateController@region')->name('create.region');
             Route::get('/create/advert/{region?}', 'CreateController@advert')->name('create.advert');
             Route::post('/create/advert/{region?}', 'CreateController@store')->name('create.advert.store');
